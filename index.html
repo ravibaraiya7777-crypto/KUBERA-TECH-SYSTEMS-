@@ -134,10 +134,10 @@ onclick="callBusiness()">
 📞 CALL NOW
 </button>
 
-<button class="btn green"
-style="width:100%"
-onclick="openWhatsApp('Hello KUBERA TECH SYSTEMS, I need CCTV service.')">
-💬 WHATSAPP
+function openWhatsApp(message) {
+    const url = "https://wa.me/917984550400?text=" + encodeURIComponent(message);
+    window.location.href = url;
+}
 </button>
 
 </div>
