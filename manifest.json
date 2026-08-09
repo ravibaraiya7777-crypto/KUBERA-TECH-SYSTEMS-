@@ -1,0 +1,10 @@
+{
+  "name": "KUBERA TECH SYSTEMS",
+  "short_name": "KUBERA TECH",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "description": "KUBERA TECH SYSTEMS - CCTV Sales, Service, AMC and GST Invoice",
+  "icons": []
+}
