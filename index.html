@@ -183,7 +183,40 @@ window.register=async()=>{
 }
 window.logout=()=>signOut(auth);
 
-onAuthStateChanged(auth, async user=>{
+onAuthStateChanged(auth, async user => {
+  if (!user) {
+    document.getElementById("loginPage").classList.remove("hidden");
+    document.getElementById("app").classList.add("hidden");
+    return;
+  }
+
+  currentUser = user;
+
+  // Admin email
+  if (user.email.toLowerCase() === "bravi8209@gmail.com") {
+    currentRole = "admin";
+  } else {
+    currentRole = "worker";
+  }
+
+  // Show dashboard immediately after successful login
+  document.getElementById("loginPage").classList.add("hidden");
+  document.getElementById("app").classList.remove("hidden");
+
+  document.getElementById("roleText").textContent =
+    (currentRole === "admin" ? "ADMIN" : "WORKER") +
+    " • " + user.email;
+
+  document.getElementById("workerBox")
+    .classList.toggle("hidden", currentRole !== "admin");
+
+  try {
+    await loadUsers();
+    await loadWorks();
+  } catch (e) {
+    console.error("Dashboard data error:", e);
+  }
+});
   if(!user)return;
   currentUser=user;
   const snap=await getDoc(doc(db,"users",user.uid));
