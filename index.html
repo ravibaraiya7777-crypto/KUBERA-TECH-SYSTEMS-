@@ -289,7 +289,96 @@ async function loadWorks(){
 window.addWork=async()=>{
   const msg=document.getElementById("workMsg"); msg.className="error"; msg.textContent="";
   try{
-    if(!customer.value.trim()||!location.value.trim()||!details.value.trim()) throw new Error("Customer, Location and Work Details are required.");
+    window.addWork = async () => {
+  const msg = document.getElementById("workMsg");
+  msg.className = "error";
+  msg.textContent = "";
+
+  try {
+    const customerEl = document.getElementById("customer");
+    const locationEl = document.getElementById("location");
+    const workTypeEl = document.getElementById("workType");
+    const cameraQtyEl = document.getElementById("cameraQty");
+    const statusEl = document.getElementById("status");
+    const detailsEl = document.getElementById("details");
+    const materialEl = document.getElementById("material");
+
+    const customer = customerEl.value.trim();
+    const location = locationEl.value.trim();
+    const details = detailsEl.value.trim();
+    const material = materialEl.value.trim();
+
+    if (!customer || !location || !details) {
+      throw new Error(
+        "Customer, Location and Work Details are required."
+      );
+    }
+
+    let workerId = currentUser.uid;
+    let workerName = currentUser.email;
+
+    // ADMIN
+    if (currentRole === "admin") {
+      const workerSelectEl = document.getElementById("workerSelect");
+      workerId = workerSelectEl.value;
+
+      const worker = allUsers.find(x => x.id === workerId);
+
+      if (worker) {
+        workerName = worker.name || worker.email;
+      }
+    }
+
+    // WORKER
+    else {
+      const worker = allUsers.find(
+        x => x.id === currentUser.uid
+      );
+
+      if (worker) {
+        workerName = worker.name || worker.email;
+      }
+    }
+
+    await addDoc(collection(db, "works"), {
+      workerId: workerId,
+      workerName: workerName,
+
+      customer: customer,
+      location: location,
+
+      workType: workTypeEl.value,
+
+      cameraQty: Number(cameraQtyEl.value || 0),
+
+      status: statusEl.value,
+
+      details: details,
+      material: material,
+
+      createdBy: currentUser.uid,
+      createdAt: serverTimestamp()
+    });
+
+    msg.className = "success";
+    msg.textContent = "✅ Work saved successfully.";
+
+    // Clear form
+    customerEl.value = "";
+    locationEl.value = "";
+    detailsEl.value = "";
+    materialEl.value = "";
+    cameraQtyEl.value = 0;
+
+    await loadWorks();
+
+  } catch (e) {
+    console.error("SAVE WORK ERROR:", e);
+
+    msg.className = "error";
+    msg.textContent = "❌ " + (e.message || "Work save failed.");
+  }
+};
     let workerId=currentUser.uid, workerName=currentUser.email;
     if(currentRole==="admin"){
       workerId=workerSelect.value;
