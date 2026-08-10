@@ -9,247 +9,327 @@
 *{box-sizing:border-box}
 
 body{
-  margin:0;
-  font-family:Arial,sans-serif;
-  background:#f1f5f9;
-  color:#0f172a
+margin:0;
+font-family:Arial,sans-serif;
+background:#f1f5f9;
+color:#0f172a
 }
 
 header{
-  background:#0f172a;
-  color:white;
-  padding:16px 20px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:10px
+background:#0f172a;
+color:white;
+padding:16px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:10px
 }
 
 .brand{
-  font-size:20px;
-  font-weight:800
-}
-
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:18px
-}
-
-.card{
-  background:white;
-  border-radius:16px;
-  padding:20px;
-  margin-bottom:18px;
-  box-shadow:0 3px 15px #00000012
-}
-
-.login{
-  max-width:430px;
-  margin:60px auto
-}
-
-.hidden{
-  display:none!important
+font-size:20px;
+font-weight:800
 }
 
 .muted{
-  color:#64748b;
-  font-size:13px
+color:#64748b;
+font-size:13px
 }
 
 button{
-  border:0;
-  border-radius:10px;
-  padding:11px 15px;
-  background:#2563eb;
-  color:white;
-  font-weight:700;
-  cursor:pointer
+border:0;
+border-radius:10px;
+padding:11px 15px;
+background:#2563eb;
+color:white;
+font-weight:700;
+cursor:pointer
 }
 
-button.secondary{
-  background:#475569
+button.secondary{background:#475569}
+button.danger{background:#dc2626}
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:20px
 }
 
-button.danger{
-  background:#dc2626
+.card{
+background:white;
+border-radius:16px;
+padding:20px;
+margin-bottom:18px;
+box-shadow:0 3px 15px #0000000d
 }
 
 input,select,textarea{
-  width:100%;
-  padding:12px;
-  margin-top:6px;
-  border:1px solid #cbd5e1;
-  border-radius:10px;
-  font-size:14px
+width:100%;
+padding:12px;
+border:1px solid #cbd5e1;
+border-radius:10px;
+margin-top:6px;
+background:white
 }
 
 label{
-  display:block;
-  margin-top:12px;
-  font-size:13px;
-  font-weight:700
+font-size:13px;
+font-weight:700;
+display:block;
+margin-top:13px
 }
 
 .grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:14px
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:14px
 }
 
-.full{
-  grid-column:1/-1
-}
-
-.tabs{
-  display:flex;
-  gap:8px;
-  margin-bottom:15px
-}
-
-.tabs button{
-  flex:1
-}
+.full{grid-column:1/-1}
+.hidden{display:none!important}
 
 .stats{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:12px;
-  margin-bottom:18px
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:12px;
+margin-bottom:18px
 }
 
 .stat{
-  background:white;
-  padding:18px;
-  border-radius:14px
+background:white;
+padding:18px;
+border-radius:14px
 }
 
 .stat b{
-  display:block;
-  font-size:28px;
-  margin-top:5px
+font-size:28px;
+display:block;
+margin-top:6px
 }
 
-.work,
-.invoice-card{
-  border:1px solid #e2e8f0;
-  border-radius:13px;
-  padding:15px;
-  margin-top:12px
+.work{
+border:1px solid #e2e8f0;
+border-radius:13px;
+padding:15px;
+margin-top:12px
 }
 
 .worktop{
-  display:flex;
-  justify-content:space-between;
-  gap:10px
+display:flex;
+justify-content:space-between;
+gap:10px
 }
 
 .badge{
-  background:#dbeafe;
-  color:#1d4ed8;
-  padding:5px 9px;
-  border-radius:20px;
-  font-size:12px;
-  font-weight:bold;
-  height:max-content
+padding:5px 9px;
+border-radius:20px;
+background:#dbeafe;
+color:#1d4ed8;
+font-size:12px;
+font-weight:bold
 }
 
+.login{
+max-width:430px;
+margin:60px auto
+}
+
+.tabs{
+display:flex;
+gap:8px;
+margin-bottom:15px
+}
+
+.tabs button{flex:1}
+
 .error{
-  color:#dc2626;
-  margin-top:10px;
-  font-size:13px
+color:#dc2626;
+font-size:13px;
+margin-top:10px
 }
 
 .success{
-  color:#15803d;
-  margin-top:10px;
-  font-size:13px
+color:#15803d;
+font-size:13px;
+margin-top:10px
 }
 
 .invoice-item{
-  display:grid;
-  grid-template-columns:2fr 80px 120px 120px 45px;
-  gap:8px;
-  align-items:end;
-  margin-top:8px
+display:grid;
+grid-template-columns:2fr 90px 120px 120px 44px;
+gap:8px;
+align-items:end;
+margin-top:8px
 }
 
 .invoice-total{
-  max-width:420px;
-  margin-left:auto;
-  margin-top:18px
+max-width:420px;
+margin-left:auto;
+margin-top:15px
 }
 
 .invoice-row{
-  display:flex;
-  justify-content:space-between;
-  padding:7px 0
+display:flex;
+justify-content:space-between;
+padding:6px 0
 }
 
 .invoice-grand{
-  border-top:2px solid #111;
-  padding-top:12px;
-  font-size:20px;
-  font-weight:800
+font-size:20px;
+font-weight:800;
+border-top:2px solid #0f172a;
+padding-top:10px
 }
 
 .invoice-actions{
-  display:flex;
-  gap:8px;
-  flex-wrap:wrap;
-  margin-top:18px
+display:flex;
+gap:8px;
+flex-wrap:wrap;
+margin-top:15px
 }
 
-#printInvoice{
-  background:white
+.invoice-card{
+border:1px solid #e2e8f0;
+border-radius:13px;
+padding:15px;
+margin-top:12px
+}
+
+.print-invoice{
+background:white;
+max-width:800px;
+margin:auto;
+padding:35px
+}
+
+.company-header{
+display:flex;
+justify-content:space-between;
+border-bottom:3px solid #0f172a;
+padding-bottom:15px;
+margin-bottom:20px
+}
+
+.company-name{
+font-size:28px;
+font-weight:900
+}
+
+.invoice-title{
+font-size:25px;
+font-weight:900;
+text-align:right
+}
+
+.customer-box{
+border:1px solid #cbd5e1;
+padding:15px;
+border-radius:8px;
+margin-bottom:20px
+}
+
+.print-table{
+width:100%;
+border-collapse:collapse;
+margin-top:15px
+}
+
+.print-table th,
+.print-table td{
+border:1px solid #cbd5e1;
+padding:9px;
+text-align:left
+}
+
+.print-table th{
+background:#f1f5f9
+}
+
+.print-total{
+margin-left:auto;
+width:300px;
+margin-top:20px
+}
+
+.print-total div{
+display:flex;
+justify-content:space-between;
+padding:5px
+}
+
+.print-grand{
+font-size:20px;
+font-weight:900;
+border-top:2px solid #111;
+padding-top:8px
 }
 
 @media(max-width:700px){
 
-  .grid,
-  .stats{
-    grid-template-columns:1fr
-  }
+.grid,
+.stats{
+grid-template-columns:1fr
+}
 
-  .full{
-    grid-column:auto
-  }
+.full{
+grid-column:auto
+}
 
-  header{
-    padding:13px
-  }
+header{
+padding:14px
+}
 
-  .container{
-    padding:12px
-  }
+.container{
+padding:12px
+}
 
-  .invoice-item{
-    overflow-x:auto;
-    grid-template-columns:200px 80px 110px 120px 45px
-  }
+.invoice-item{
+grid-template-columns:1fr 80px 100px 100px 44px;
+overflow-x:auto
+}
+
+.invoice-total{
+max-width:none
+}
+
+.company-header{
+display:block
+}
+
+.invoice-title{
+text-align:left;
+margin-top:15px
+}
+
+.print-invoice{
+padding:15px
+}
+
 }
 
 @media print{
 
-  body *{
-    visibility:hidden!important
-  }
+body *{
+visibility:hidden!important
+}
 
-  #printInvoice,
-  #printInvoice *{
-    visibility:visible!important
-  }
+#printInvoice,
+#printInvoice *{
+visibility:visible!important
+}
 
-  #printInvoice{
-    display:block!important;
-    position:absolute;
-    left:0;
-    top:0;
-    width:100%;
-    padding:25px;
-    background:white
-  }
+#printInvoice{
+display:block!important;
+position:absolute;
+left:0;
+top:0;
+width:100%;
+background:white
+}
+
+.no-print{
+display:none!important
+}
+
 }
 </style>
 </head>
@@ -262,7 +342,9 @@ label{
 
 <div class="card login">
 
-<h2>KUBERA TECH SYSTEMS</h2>
+<div style="font-size:26px;font-weight:800">
+KUBERA TECH SYSTEMS
+</div>
 
 <p class="muted">
 Worker Work Management
@@ -283,15 +365,23 @@ Create Account
 <div id="authForm">
 
 <label>Email</label>
-<input id="email" type="email" placeholder="Email">
+
+<input id="email"
+type="email"
+placeholder="Email">
 
 <label>Password</label>
-<input id="password" type="password" placeholder="Password">
+
+<input id="password"
+type="password"
+placeholder="Password">
 
 <button
 style="width:100%;margin-top:18px"
 onclick="login()">
+
 Login
+
 </button>
 
 <div id="authMsg"></div>
@@ -302,7 +392,7 @@ Login
 </div>
 
 
-<!-- APP -->
+<!-- APPLICATION -->
 
 <div id="app" class="hidden">
 
@@ -314,9 +404,9 @@ Login
 KUBERA TECH SYSTEMS
 </div>
 
-<div
-id="roleText"
-style="font-size:12px;color:#cbd5e1">
+<div id="roleText"
+class="muted"
+style="color:#cbd5e1">
 </div>
 
 </div>
@@ -327,13 +417,17 @@ style="font-size:12px;color:#cbd5e1">
 id="invoiceNav"
 class="secondary hidden"
 onclick="showInvoices()">
-🧾 Invoices
+
+🧾 Invoice
+
 </button>
 
 <button
 class="secondary"
 onclick="logout()">
+
 Logout
+
 </button>
 
 </div>
@@ -342,7 +436,6 @@ Logout
 
 
 <div class="container">
-
 
 <!-- STATS -->
 
@@ -386,8 +479,7 @@ Completed
 
 <label>Customer Name</label>
 
-<input
-id="customer"
+<input id="customer"
 placeholder="Customer name">
 
 </div>
@@ -396,8 +488,7 @@ placeholder="Customer name">
 
 <label>Location</label>
 
-<input
-id="location"
+<input id="location"
 placeholder="Work location">
 
 </div>
@@ -424,8 +515,7 @@ placeholder="Work location">
 
 <label>Camera Quantity</label>
 
-<input
-id="cameraQty"
+<input id="cameraQty"
 type="number"
 min="0"
 value="0">
@@ -449,10 +539,9 @@ value="0">
 
 <label>Work Details</label>
 
-<textarea
-id="details"
+<textarea id="details"
 rows="4"
-placeholder="What work was done?"></textarea>
+placeholder="Work details"></textarea>
 
 </div>
 
@@ -460,10 +549,9 @@ placeholder="What work was done?"></textarea>
 
 <label>Material Used</label>
 
-<textarea
-id="material"
+<textarea id="material"
 rows="3"
-placeholder="Cable, camera, HDD, connector etc."></textarea>
+placeholder="Cable, Camera, HDD, Connector etc."></textarea>
 
 </div>
 
@@ -472,7 +560,9 @@ placeholder="Cable, camera, HDD, connector etc."></textarea>
 <button
 style="margin-top:18px"
 onclick="addWork()">
+
 Save Work
+
 </button>
 
 <div id="workMsg"></div>
@@ -487,8 +577,8 @@ Save Work
 <div style="
 display:flex;
 justify-content:space-between;
-align-items:center;
 gap:10px;
+align-items:center;
 flex-wrap:wrap">
 
 <h2 style="margin:0">
@@ -510,11 +600,21 @@ oninput="renderWorks()">
 
 <!-- INVOICE -->
 
-<div
-id="invoiceSection"
+<div id="invoiceSection"
 class="card hidden">
 
 <h2>🧾 Create Invoice</h2>
+
+<div class="card"
+style="background:#f8fafc">
+
+<b>KUBERA TECH SYSTEMS</b>
+
+<div class="muted">
+Ravi Baraiya • 7984550400 • Rajkot
+</div>
+
+</div>
 
 <div class="grid">
 
@@ -522,9 +622,7 @@ class="card hidden">
 
 <label>Invoice No.</label>
 
-<input
-id="invoiceNo"
-readonly>
+<input id="invoiceNo" readonly>
 
 </div>
 
@@ -532,8 +630,7 @@ readonly>
 
 <label>Invoice Date</label>
 
-<input
-id="invoiceDate"
+<input id="invoiceDate"
 type="date">
 
 </div>
@@ -542,8 +639,7 @@ type="date">
 
 <label>Customer Name</label>
 
-<input
-id="invCustomer"
+<input id="invCustomer"
 placeholder="Customer name">
 
 </div>
@@ -552,8 +648,7 @@ placeholder="Customer name">
 
 <label>Customer Mobile</label>
 
-<input
-id="invMobile"
+<input id="invMobile"
 placeholder="Mobile number">
 
 </div>
@@ -562,10 +657,8 @@ placeholder="Mobile number">
 
 <label>Customer Address</label>
 
-<textarea
-id="invAddress"
-rows="2"
-placeholder="Address"></textarea>
+<textarea id="invAddress"
+rows="2"></textarea>
 
 </div>
 
@@ -577,23 +670,26 @@ placeholder="Address"></textarea>
 <div id="invoiceItems"></div>
 
 <button
+type="button"
 class="secondary"
 onclick="addInvoiceItem()">
+
 + Add Item
+
 </button>
 
 
-<div class="grid">
+<div class="grid"
+style="margin-top:10px">
 
 <div>
 
 <label>Discount</label>
 
-<input
-id="invDiscount"
+<input id="invDiscount"
 type="number"
-value="0"
 min="0"
+value="0"
 oninput="calculateInvoice()">
 
 </div>
@@ -602,11 +698,10 @@ oninput="calculateInvoice()">
 
 <label>GST %</label>
 
-<input
-id="invGst"
+<input id="invGst"
 type="number"
-value="0"
 min="0"
+value="0"
 oninput="calculateInvoice()">
 
 </div>
@@ -677,7 +772,9 @@ oninput="calculateInvoice()">
 <button
 class="secondary"
 onclick="printCurrentInvoice()">
+
 🖨️ Print Invoice
+
 </button>
 
 </div>
@@ -689,8 +786,7 @@ onclick="printCurrentInvoice()">
 
 <!-- INVOICE HISTORY -->
 
-<div
-id="invoiceHistorySection"
+<div id="invoiceHistorySection"
 class="card hidden">
 
 <h2>Invoice History</h2>
@@ -707,17 +803,17 @@ oninput="renderInvoices()">
 
 <!-- PRINT AREA -->
 
-<div
-id="printInvoice"
+<div id="printInvoice"
 class="hidden">
 </div>
-
 
 </div>
 </div>
 
 
 <script type="module">
+
+/* FIREBASE */
 
 import {
 initializeApp
@@ -751,12 +847,9 @@ from
 "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
 
 
-/* FIREBASE */
-
 const firebaseConfig={
 
-apiKey:
-"AIzaSyCqM1H3BhFYN3fglFnSBOzRB8IELQybtT4",
+apiKey:"AIzaSyCqM1H3BhFYN3fglFnSBOzRB8IELQybtT4",
 
 authDomain:
 "kubera-tech-systems-598d2.firebaseapp.com",
@@ -776,14 +869,14 @@ appId:
 };
 
 
-const appFirebase =
+const firebaseApp=
 initializeApp(firebaseConfig);
 
-const auth =
-getAuth(appFirebase);
+const auth=
+getAuth(firebaseApp);
 
-const db =
-getFirestore(appFirebase);
+const db=
+getFirestore(firebaseApp);
 
 
 let currentUser=null;
@@ -796,9 +889,9 @@ let allInvoices=[];
 
 /* ESCAPE */
 
-window.esc=function(v){
+window.esc=function(value){
 
-return String(v ?? "")
+return String(value??"")
 .replace(/&/g,"&amp;")
 .replace(/</g,"&lt;")
 .replace(/>/g,"&gt;")
@@ -806,21 +899,6 @@ return String(v ?? "")
 .replace(/'/g,"&#039;");
 
 };
-
-
-/* MONEY */
-
-function money(v){
-
-return "₹"+Number(v||0).toLocaleString(
-"en-IN",
-{
-minimumFractionDigits:2,
-maximumFractionDigits:2
-}
-);
-
-}
 
 
 /* LOGIN */
@@ -844,50 +922,14 @@ placeholder="Password">
 <button
 style="width:100%;margin-top:18px"
 onclick="login()">
+
 Login
+
 </button>
 
 <div id="authMsg"></div>
 
 `;
-
-};
-
-
-window.login=async function(){
-
-const msg=
-document.getElementById("authMsg");
-
-try{
-
-const email=
-document.getElementById("email")
-.value.trim();
-
-const password=
-document.getElementById("password").value;
-
-if(!email||!password)
-throw new Error(
-"Email and Password are required."
-);
-
-await signInWithEmailAndPassword(
-auth,
-email,
-password
-);
-
-}
-catch(e){
-
-msg.className="error";
-
-msg.textContent=
-e.message.replace("Firebase: ","");
-
-}
 
 };
 
@@ -918,7 +960,9 @@ placeholder="Minimum 6 characters">
 <button
 style="width:100%;margin-top:18px"
 onclick="register()">
+
 Create Account
+
 </button>
 
 <div id="authMsg"></div>
@@ -928,10 +972,55 @@ Create Account
 };
 
 
+/* LOGIN */
+
+window.login=async function(){
+
+const msg=document.getElementById("authMsg");
+
+msg.className="error";
+msg.textContent="";
+
+try{
+
+const email=
+document.getElementById("email")
+.value.trim();
+
+const password=
+document.getElementById("password")
+.value;
+
+if(!email||!password)
+throw new Error(
+"Email and Password are required."
+);
+
+await signInWithEmailAndPassword(
+auth,
+email,
+password
+);
+
+}
+catch(e){
+
+msg.textContent=
+e.message.replace("Firebase: ","");
+
+}
+
+};
+
+
+/* REGISTER */
+
 window.register=async function(){
 
-const msg=
-document.getElementById("authMsg");
+const msg=document.getElementById("authMsg");
+
+msg.className="error";
+msg.textContent="";
 
 try{
 
@@ -959,22 +1048,29 @@ throw new Error(
 "Password must be at least 6 characters."
 );
 
-const result=
+
+const userCredential=
 await createUserWithEmailAndPassword(
 auth,
 email,
 password
 );
 
+
 await setDoc(
-doc(db,"users",result.user.uid),
+doc(
+db,
+"users",
+userCredential.user.uid
+),
 {
-name,
-email,
+name:name,
+email:email,
 role:"worker",
 createdAt:serverTimestamp()
 }
 );
+
 
 msg.className="success";
 
@@ -983,8 +1079,6 @@ msg.textContent=
 
 }
 catch(e){
-
-msg.className="error";
 
 msg.textContent=
 e.message.replace("Firebase: ","");
@@ -1003,13 +1097,15 @@ signOut(auth);
 };
 
 
-/* AUTH STATE */
+/* AUTH */
 
 onAuthStateChanged(
 auth,
 async user=>{
 
 if(!user){
+
+currentUser=null;
 
 document
 .getElementById("loginPage")
@@ -1041,7 +1137,7 @@ doc(db,"users",user.uid)
 if(snap.exists()){
 
 currentRole=
-snap.data().role || "worker";
+snap.data().role||"worker";
 
 }
 else{
@@ -1056,6 +1152,8 @@ createdAt:serverTimestamp()
 }
 );
 
+currentRole="worker";
+
 }
 
 }
@@ -1063,37 +1161,10 @@ catch(e){
 
 console.error(e);
 
-}
-
-
-/* ADMIN EMAIL */
-
-if(
-user.email.toLowerCase()
-===
-"bravi8209@gmail.com"
-){
-
-currentRole="admin";
-
-try{
-
-await setDoc(
-doc(db,"users",user.uid),
-{
-email:user.email,
-role:"admin"
-},
-{merge:true}
-);
-
-}
-catch(e){}
+currentRole="worker";
 
 }
 
-
-/* SHOW APP */
 
 document
 .getElementById("loginPage")
@@ -1106,30 +1177,23 @@ document
 .remove("hidden");
 
 
-document
-.getElementById("roleText")
+document.getElementById("roleText")
 .textContent=
 (currentRole==="admin"
 ?"ADMIN"
 :"WORKER")
-+
-" • "
-+
-user.email;
++" • "+user.email;
 
 
-/* ADMIN FEATURES */
-
-document
-.getElementById("workerBox")
+document.getElementById("workerBox")
 .classList
 .toggle(
 "hidden",
 currentRole!=="admin"
 );
 
-document
-.getElementById("invoiceNav")
+
+document.getElementById("invoiceNav")
 .classList
 .toggle(
 "hidden",
@@ -1138,7 +1202,6 @@ currentRole!=="admin"
 
 
 await loadUsers();
-
 await loadWorks();
 
 if(currentRole==="admin")
@@ -1147,7 +1210,7 @@ await loadInvoices();
 });
 
 
-/* LOAD USERS */
+/* USERS */
 
 async function loadUsers(){
 
@@ -1170,18 +1233,16 @@ id:x.id,
 });
 
 
-document
-.getElementById("workerSelect")
-.innerHTML=
+document.getElementById(
+"workerSelect"
+).innerHTML=
 
 allUsers
 .filter(x=>x.role==="worker")
 .map(x=>
-`
-<option value="${esc(x.id)}">
+`<option value="${esc(x.id)}">
 ${esc(x.name||x.email)}
-</option>
-`
+</option>`
 )
 .join("");
 
@@ -1235,14 +1296,14 @@ renderWorks();
 }
 catch(e){
 
-document
-.getElementById("works")
-.innerHTML=
-`
-<p class="error">
+console.error(e);
+
+document.getElementById(
+"works"
+).innerHTML=
+`<p class="error">
 ${esc(e.message)}
-</p>
-`;
+</p>`;
 
 }
 
@@ -1256,6 +1317,9 @@ window.addWork=async function(){
 const msg=
 document.getElementById("workMsg");
 
+msg.className="error";
+msg.textContent="";
+
 try{
 
 const customer=
@@ -1268,6 +1332,10 @@ document.getElementById("location")
 
 const details=
 document.getElementById("details")
+.value.trim();
+
+const material=
+document.getElementById("material")
 .value.trim();
 
 if(!customer)
@@ -1293,8 +1361,9 @@ let workerName=currentUser.email;
 if(currentRole==="admin"){
 
 workerId=
-document.getElementById("workerSelect")
-.value;
+document.getElementById(
+"workerSelect"
+).value;
 
 const worker=
 allUsers.find(
@@ -1326,61 +1395,65 @@ collection(db,"works"),
 
 workerId,
 workerName,
-
 customer,
-
 location,
 
 workType:
-document.getElementById("workType")
-.value,
+document.getElementById(
+"workType"
+).value,
 
 cameraQty:
 Number(
-document.getElementById("cameraQty")
-.value||0
+document.getElementById(
+"cameraQty"
+).value||0
 ),
 
 status:
-document.getElementById("status")
-.value,
+document.getElementById(
+"status"
+).value,
 
 details,
+material,
 
-material:
-document.getElementById("material")
-.value.trim(),
+createdBy:
+currentUser.uid,
 
-createdBy:currentUser.uid,
-
-createdAt:serverTimestamp()
+createdAt:
+serverTimestamp()
 
 }
 );
 
 
 msg.className="success";
-
 msg.textContent=
 "✅ Work saved successfully.";
 
 
-document.getElementById("customer").value="";
-document.getElementById("location").value="";
-document.getElementById("details").value="";
-document.getElementById("material").value="";
-document.getElementById("cameraQty").value=0;
+[
+"customer",
+"location",
+"details",
+"material"
+]
+.forEach(id=>{
+document.getElementById(id).value="";
+});
 
+
+document.getElementById(
+"cameraQty"
+).value=0;
 
 await loadWorks();
 
 }
 catch(e){
 
-msg.className="error";
-
-msg.textContent=
-"❌ "+e.message;
+msg.textContent="❌ "+e.message;
 
 }
 
@@ -1391,11 +1464,12 @@ msg.textContent=
 
 window.renderWorks=function(){
 
-const search=
+const term=
 (
-document.getElementById("search").value||""
-)
-.toLowerCase();
+document.getElementById(
+"search"
+).value||""
+).toLowerCase();
 
 
 const list=
@@ -1408,28 +1482,30 @@ ${w.workType||""}
 ${w.details||""}
 `
 .toLowerCase()
-.includes(search)
+.includes(term)
 );
 
 
-document.getElementById("totalCount")
-.textContent=list.length;
+document.getElementById(
+"totalCount"
+).textContent=list.length;
 
-document.getElementById("pendingCount")
-.textContent=
+document.getElementById(
+"pendingCount"
+).textContent=
 list.filter(
 x=>x.status==="Pending"
 ).length;
 
-document.getElementById("completedCount")
-.textContent=
+document.getElementById(
+"completedCount"
+).textContent=
 list.filter(
 x=>x.status==="Completed"
 ).length;
 
 
-document.getElementById("works")
-.innerHTML=
+document.getElementById("works").innerHTML=
 
 list.length
 
@@ -1472,27 +1548,34 @@ ${esc(w.details||"")}
 ${
 w.material
 ?
-`
-<p>
+`<p>
 <b>Material:</b>
 ${esc(w.material)}
-</p>
-`
+</p>`
 :""
 }
+
+<div class="muted"
+style="margin-top:8px">
+
+${
+w.createdAt?.toDate
+?
+w.createdAt.toDate().toLocaleString()
+:
+"Recently added"
+}
+
+</div>
 
 ${
 currentRole==="admin"
 ?
-`
-<button
+`<button
 style="margin-top:12px"
 onclick="createInvoiceFromWork('${w.id}')">
-
 🧾 Create Invoice
-
-</button>
-`
+</button>`
 :""
 }
 
@@ -1507,16 +1590,7 @@ onclick="createInvoiceFromWork('${w.id}')">
 };
 
 
-/* ================= INVOICE ================= */
-
-function today(){
-
-return new Date()
-.toISOString()
-.slice(0,10);
-
-}
-
+/* INVOICE NUMBER */
 
 function nextInvoiceNumber(){
 
@@ -1532,11 +1606,9 @@ String(x.invoiceNo||"")
 .filter(Number.isFinite);
 
 const next=
-nums.length
-?
-Math.max(...nums)+1
-:
-1;
+(nums.length
+?Math.max(...nums)
+:0)+1;
 
 return "KTS-"+
 String(next).padStart(5,"0");
@@ -1544,104 +1616,116 @@ String(next).padStart(5,"0");
 }
 
 
-/* SHOW INVOICE */
+/* DATE */
+
+function todayISO(){
+
+return new Date()
+.toISOString()
+.slice(0,10);
+
+}
+
+
+/* MONEY */
+
+function money(n){
+
+return "₹"+
+Number(n||0)
+.toLocaleString(
+"en-IN",
+{
+minimumFractionDigits:2,
+maximumFractionDigits:2
+}
+);
+
+}
+
+
+/* SHOW INVOICES */
 
 window.showInvoices=function(){
 
 if(currentRole!=="admin"){
 
-alert(
-"Only Admin can create invoices."
-);
+alert("Only Admin can create invoices.");
 
 return;
 
 }
 
-
-document
-.getElementById("invoiceSection")
+document.getElementById(
+"invoiceSection"
+)
 .classList
 .remove("hidden");
 
-document
-.getElementById("invoiceHistorySection")
+document.getElementById(
+"invoiceHistorySection"
+)
 .classList
 .remove("hidden");
 
 
-document.getElementById("invoiceNo")
-.value=nextInvoiceNumber();
+document.getElementById(
+"invoiceNo"
+).value=
+nextInvoiceNumber();
 
-document.getElementById("invoiceDate")
-.value=today();
+document.getElementById(
+"invoiceDate"
+).value=
+todayISO();
 
-document.getElementById("invCustomer").value="";
-document.getElementById("invMobile").value="";
-document.getElementById("invAddress").value="";
-document.getElementById("invDiscount").value=0;
-document.getElementById("invGst").value=0;
+document.getElementById(
+"invCustomer"
+).value="";
 
-document.getElementById("invPaymentStatus")
-.value="Pending";
+document.getElementById(
+"invMobile"
+).value="";
 
-document.getElementById("invPaymentMethod")
-.value="UPI";
+document.getElementById(
+"invAddress"
+).value="";
 
-document.getElementById("invoiceItems")
-.innerHTML="";
+document.getElementById(
+"invDiscount"
+).value=0;
+
+document.getElementById(
+"invGst"
+).value=0;
+
+document.getElementById(
+"invPaymentStatus"
+).value="Pending";
+
+document.getElementById(
+"invPaymentMethod"
+).value="UPI";
+
+document.getElementById(
+"invoiceItems"
+).innerHTML="";
 
 addInvoiceItem();
 
 calculateInvoice();
 
+document.getElementById(
+"invoiceMsg"
+).textContent="";
+
 window.scrollTo({
 top:
-document.getElementById("invoiceSection")
-.offsetTop-10,
+document.getElementById(
+"invoiceSection"
+).offsetTop-10,
 behavior:"smooth"
 });
-
-};
-
-
-/* CREATE FROM WORK */
-
-window.createInvoiceFromWork=function(id){
-
-if(currentRole!=="admin"){
-
-alert(
-"Only Admin can create invoices."
-);
-
-return;
-
-}
-
-
-const work=
-allWorks.find(x=>x.id===id);
-
-if(!work)
-return;
-
-
-showInvoices();
-
-document.getElementById("invCustomer")
-.value=work.customer||"";
-
-document.getElementById("invoiceItems")
-.innerHTML="";
-
-addInvoiceItem(
-work.workType||"CCTV Service",
-Number(work.cameraQty||1),
-0
-);
-
-calculateInvoice();
 
 };
 
@@ -1667,8 +1751,8 @@ row.innerHTML=`
 
 <input
 class="inv-desc"
-value="${esc(desc)}"
 placeholder="CCTV Camera / Service"
+value="${esc(desc)}"
 oninput="calculateInvoice()">
 
 </div>
@@ -1681,69 +1765,4 @@ oninput="calculateInvoice()">
 class="inv-qty"
 type="number"
 min="1"
-value="${qty}"
-oninput="calculateInvoice()">
-
-</div>
-
-<div>
-
-<label>Rate</label>
-
-<input
-class="inv-rate"
-type="number"
-min="0"
-value="${rate}"
-oninput="calculateInvoice()">
-
-</div>
-
-<div>
-
-<label>Amount</label>
-
-<input
-class="inv-amount"
-readonly
-value="₹0.00">
-
-</div>
-
-<div>
-
-<label>&nbsp;</label>
-
-<button
-type="button"
-class="danger"
-onclick="
-this.closest('.invoice-item').remove();
-calculateInvoice();
-">
-
-✕
-
-</button>
-
-</div>
-
-`;
-
-document
-.getElementById("invoiceItems")
-.appendChild(row);
-
-calculateInvoice();
-
-};
-
-
-/* CALCULATE */
-
-window.calculateInvoice=function(){
-
-let subtotal=0;
-
-
-  
+valu
