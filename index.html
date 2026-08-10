@@ -1,314 +1,217 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>KUBERA TECH SYSTEMS</title>
-
-<style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KUBERA TECH SYSTEMS</title><style>
 *{box-sizing:border-box}
 body{
- margin:0;
- font-family:Arial,sans-serif;
- background:#f1f5f9;
- color:#0f172a
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#f1f5f9;
+  color:#0f172a
 }
 header{
- background:#0f172a;
- color:white;
- padding:16px 20px;
- display:flex;
- justify-content:space-between;
- align-items:center;
- gap:10px
+  background:#0f172a;
+  color:white;
+  padding:16px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px
 }
-.brand{font-size:20px;font-weight:800}
-.container{max-width:1100px;margin:auto;padding:18px}
+.brand{font-size:20px;font-weight:bold}
+.container{max-width:1100px;margin:auto;padding:16px}
 .card{
- background:white;
- padding:20px;
- border-radius:16px;
- margin-bottom:18px;
- box-shadow:0 3px 15px #0001
+  background:white;
+  border-radius:16px;
+  padding:20px;
+  margin-bottom:16px;
+  box-shadow:0 3px 15px #0001
+}
+.login{
+  max-width:420px;
+  margin:60px auto
 }
 input,select,textarea{
- width:100%;
- padding:12px;
- margin-top:6px;
- border:1px solid #cbd5e1;
- border-radius:9px;
- font-size:15px
+  width:100%;
+  padding:12px;
+  margin-top:6px;
+  border:1px solid #cbd5e1;
+  border-radius:10px;
+  font-size:15px
 }
 label{
- display:block;
- margin-top:12px;
- font-size:13px;
- font-weight:bold
+  display:block;
+  margin-top:12px;
+  font-weight:bold;
+  font-size:13px
 }
 button{
- border:0;
- padding:11px 15px;
- border-radius:9px;
- background:#2563eb;
- color:white;
- font-weight:bold;
- cursor:pointer
+  border:0;
+  border-radius:10px;
+  padding:11px 15px;
+  background:#2563eb;
+  color:white;
+  font-weight:bold;
+  cursor:pointer
 }
 button.secondary{background:#475569}
 button.danger{background:#dc2626}
 .hidden{display:none!important}
-.grid{
- display:grid;
- grid-template-columns:repeat(2,1fr);
- gap:14px
-}
-.full{grid-column:1/-1}
-.login{
- max-width:430px;
- margin:60px auto
-}
 .tabs{
- display:flex;
- gap:8px;
- margin-bottom:15px
+  display:flex;
+  gap:8px;
+  margin:15px 0
 }
 .tabs button{flex:1}
-.error{color:#dc2626;margin-top:10px;font-size:14px}
-.success{color:#15803d;margin-top:10px;font-size:14px}
-.muted{color:#64748b;font-size:13px}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px
+}
+.full{grid-column:1/-1}
 .stats{
- display:grid;
- grid-template-columns:repeat(3,1fr);
- gap:12px;
- margin-bottom:18px
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px
 }
 .stat{
- background:white;
- padding:18px;
- border-radius:14px
+  background:white;
+  padding:18px;
+  border-radius:14px
 }
 .stat b{
- display:block;
- font-size:28px;
- margin-top:5px
+  display:block;
+  font-size:28px;
+  margin-top:5px
 }
 .work,.invoice-card{
- border:1px solid #e2e8f0;
- padding:15px;
- border-radius:12px;
- margin-top:12px
+  border:1px solid #e2e8f0;
+  border-radius:12px;
+  padding:15px;
+  margin-top:12px
 }
 .worktop{
- display:flex;
- justify-content:space-between;
- gap:10px
+  display:flex;
+  justify-content:space-between;
+  gap:10px
 }
 .badge{
- background:#dbeafe;
- color:#1d4ed8;
- padding:5px 9px;
- border-radius:20px;
- font-size:12px;
- font-weight:bold;
- height:max-content
+  background:#dbeafe;
+  color:#1d4ed8;
+  padding:5px 9px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:bold;
+  height:max-content
+}
+.muted{
+  color:#64748b;
+  font-size:13px
+}
+.error{
+  color:#dc2626;
+  margin-top:10px;
+  font-size:13px
+}
+.success{
+  color:#15803d;
+  margin-top:10px;
+  font-size:13px
 }
 .invoice-item{
- display:grid;
- grid-template-columns:2fr 80px 120px 120px 45px;
- gap:8px;
- align-items:end;
- margin-top:8px
+  display:grid;
+  grid-template-columns:2fr 80px 110px 110px 45px;
+  gap:8px;
+  align-items:end;
+  margin-top:10px
 }
 .invoice-total{
- max-width:420px;
- margin-left:auto;
- margin-top:15px
+  max-width:420px;
+  margin:15px 0 0 auto
 }
 .invoice-row{
- display:flex;
- justify-content:space-between;
- padding:6px 0
+  display:flex;
+  justify-content:space-between;
+  padding:7px 0
 }
-.invoice-grand{
- border-top:2px solid #111;
- font-size:20px;
- font-weight:bold;
- padding-top:10px
+.grand{
+  border-top:2px solid #0f172a;
+  font-size:20px;
+  font-weight:bold
 }
 .actions{
- display:flex;
- gap:8px;
- flex-wrap:wrap;
- margin-top:15px
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-top:15px
 }
 
 @media(max-width:700px){
- .grid,.stats{grid-template-columns:1fr}
- .full{grid-column:auto}
- .invoice-item{
-  grid-template-columns:1fr 70px 100px 100px 42px;
-  overflow-x:auto
- }
- header{padding:13px}
- .container{padding:12px}
+  .grid,.stats{grid-template-columns:1fr}
+  .full{grid-column:auto}
+  .invoice-item{
+    grid-template-columns:1fr 70px 100px 100px 45px;
+    overflow-x:auto
+  }
 }
 
-/* PRINT */
 @media print{
- body *{
-  visibility:hidden!important
- }
- #printInvoice,
- #printInvoice *{
-  visibility:visible!important
- }
- #printInvoice{
-  display:block!important;
-  position:absolute!important;
-  left:0!important;
-  top:0!important;
-  width:100%!important;
-  min-height:100vh;
-  background:white;
-  padding:30px!important
- }
+  body *{visibility:hidden!important}
+  #printArea,#printArea *{
+    visibility:visible!important
+  }
+  #printArea{
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    padding:25px;
+    background:white
+  }
 }
-</style>
-</head>
-
-<body>
-
-<!-- LOGIN -->
-<div id="loginPage" class="container">
-
-<div class="card login">
-
-<h2 style="margin-bottom:5px">
-KUBERA TECH SYSTEMS
-</h2>
-
-<div class="muted">
-Worker Work Management
-</div>
-
-<div class="tabs" style="margin-top:18px">
-
-<button onclick="showLogin()">
-Login
-</button>
-
-<button class="secondary" onclick="showRegister()">
-Create Account
-</button>
-
-</div>
-
-<div id="authForm">
-
-<label>Email</label>
+</style></head><body><!-- LOGIN --><div id="loginPage" class="container"><div class="card login"><h1>KUBERA TECH SYSTEMS</h1>
+<p class="muted">Worker Work Management</p><div class="tabs">
+<button onclick="showLogin()">Login</button>
+<button class="secondary" onclick="showRegister()">Create Account</button>
+</div><div id="authForm"><label>Email</label>
 <input id="email" type="email" placeholder="Email">
 
 <label>Password</label>
 <input id="password" type="password" placeholder="Password">
 
-<button
-style="width:100%;margin-top:18px"
-onclick="login()">
+<button style="width:100%;margin-top:18px" onclick="login()">
 Login
-</button>
-
-<div id="authMsg"></div>
-
-</div>
-</div>
-</div>
-
-
-<!-- APP -->
-<div id="app" class="hidden">
-
-<header>
-
-<div>
-<div class="brand">
-KUBERA TECH SYSTEMS
-</div>
-
-<div id="roleText"
-style="color:#cbd5e1;font-size:12px">
-</div>
-</div>
-
-<div style="display:flex;gap:7px">
-
-<button
-id="invoiceBtn"
-class="secondary hidden"
-onclick="showInvoices()">
+</button><div id="authMsg"></div></div></div>
+</div><!-- APP --><div id="app" class="hidden"><header><div>
+<div class="brand">KUBERA TECH SYSTEMS</div>
+<div id="roleText" class="muted" style="color:#cbd5e1"></div>
+</div><div style="display:flex;gap:8px">
+<button id="invoiceButton" class="secondary hidden" onclick="openInvoices()">
 🧾 Invoice
-</button>
-
-<button
-class="secondary"
-onclick="logout()">
+</button><button class="secondary" onclick="logout()">
 Logout
 </button>
-
-</div>
-
-</header>
-
-
-<div class="container">
-
-<!-- STATS -->
-<div class="stats">
-
-<div class="stat">
+</div></header><div class="container"><!-- STATS --><div class="stats"><div class="stat">
 Total Work
-<b id="totalCount">0</b>
-</div>
-
-<div class="stat">
+<b id="totalWork">0</b>
+</div><div class="stat">
 Pending
-<b id="pendingCount">0</b>
-</div>
-
-<div class="stat">
+<b id="pendingWork">0</b>
+</div><div class="stat">
 Completed
-<b id="completedCount">0</b>
-</div>
-
-</div>
-
-
-<!-- ADD WORK -->
-<div class="card">
-
-<h2>Add Work</h2>
-
-<div class="grid">
-
-<div id="workerBox">
-
-<label>Worker</label>
+<b id="completedWork">0</b>
+</div></div><!-- ADD WORK --><div class="card"><h2>Add Work</h2><div class="grid"><div id="workerField"><label>Worker</label>
 <select id="workerSelect"></select>
 
-</div>
-
-<div>
+</div><div>
 <label>Customer Name</label>
 <input id="customer" placeholder="Customer name">
-</div>
-
-<div>
+</div><div>
 <label>Location</label>
-<input id="location" placeholder="Work location">
-</div>
-
-<div>
+<input id="location" placeholder="Location">
+</div><div>
 <label>Work Type</label>
-
 <select id="workType">
 <option>CCTV Installation</option>
 <option>CCTV Service</option>
@@ -318,260 +221,90 @@ Completed
 <option>Networking</option>
 <option>Other</option>
 </select>
-
-</div>
-
-<div>
+</div><div>
 <label>Camera Quantity</label>
 <input id="cameraQty" type="number" min="0" value="0">
-</div>
-
-<div>
+</div><div>
 <label>Status</label>
-
-<select id="status">
+<select id="workStatus">
 <option>Pending</option>
 <option>Completed</option>
 </select>
-
-</div>
-
-<div class="full">
+</div><div class="full">
 <label>Work Details</label>
-<textarea id="details" rows="4"
-placeholder="What work was done?"></textarea>
-</div>
-
-<div class="full">
+<textarea id="details" rows="3"></textarea>
+</div><div class="full">
 <label>Material Used</label>
-<textarea id="material" rows="3"
-placeholder="Cable, Camera, HDD, Connector etc."></textarea>
-</div>
-
-</div>
-
-<button style="margin-top:18px" onclick="addWork()">
+<textarea id="material" rows="3"></textarea>
+</div></div><button style="margin-top:18px" onclick="saveWork()">
 Save Work
-</button>
-
-<div id="workMsg"></div>
-
-</div>
-
-
-<!-- WORK HISTORY -->
-<div class="card">
-
-<div style="
-display:flex;
-justify-content:space-between;
-gap:10px;
-align-items:center;
-flex-wrap:wrap">
-
-<h2 style="margin:0">
-Work History
-</h2>
-
-<input
-id="search"
-style="max-width:300px"
-placeholder="Search..."
+</button><div id="workMsg"></div></div><!-- WORK HISTORY --><div class="card"><h2>Work History</h2><input id="searchWork"
+placeholder="Search customer, worker, location..."
 oninput="renderWorks()">
 
-</div>
-
-<div id="works"></div>
-
-</div>
-
-
-<!-- INVOICE -->
-<div id="invoiceSection" class="card hidden">
-
-<h2>🧾 Create Invoice</h2>
-
-<div style="
-border-bottom:1px solid #e2e8f0;
-padding-bottom:15px;
-margin-bottom:15px">
-
-<b style="font-size:21px">
-KUBERA TECH SYSTEMS
-</b>
-
-<div class="muted">
-Ravi Baraiya
-</div>
-
-<div class="muted">
-📞 7984550400
-</div>
-
-<div class="muted">
-📍 Rajkot
-</div>
-
-</div>
-
-<div class="grid">
-
-<div>
-<label>Invoice No.</label>
+<div id="works"></div></div><!-- INVOICE --><div id="invoicePanel" class="card hidden"><h2>🧾 Create Invoice</h2><div style="padding:15px;border:1px solid #e2e8f0;border-radius:12px"><h2 style="margin:0">KUBERA TECH SYSTEMS</h2>
+<b>Ravi Baraiya</b>
+<div>📞 7984550400</div>
+<div>📍 Rajkot</div></div><div class="grid"><div>
+<label>Invoice Number</label>
 <input id="invoiceNo" readonly>
-</div>
-
-<div>
-<label>Invoice Date</label>
+</div><div>
+<label>Date</label>
 <input id="invoiceDate" type="date">
-</div>
-
-<div>
+</div><div>
 <label>Customer Name</label>
-<input id="invCustomer">
-</div>
-
-<div>
+<input id="invoiceCustomer">
+</div><div>
 <label>Customer Mobile</label>
-<input id="invMobile">
-</div>
-
-<div class="full">
+<input id="invoiceMobile">
+</div><div class="full">
 <label>Customer Address</label>
-<textarea id="invAddress" rows="2"></textarea>
-</div>
-
-</div>
-
-<h3>Items / Services</h3>
-
-<div id="invoiceItems"></div>
-
-<button
-class="secondary"
-onclick="addInvoiceItem()">
+<textarea id="invoiceAddress" rows="2"></textarea>
+</div></div><h3>Items / Services</h3><div id="invoiceItems"></div><button class="secondary" onclick="addItem()">
 + Add Item
-</button>
-
-<div class="grid" style="margin-top:10px">
-
-<div>
+</button><div class="grid"><div>
 <label>Discount</label>
-<input
-id="invDiscount"
-type="number"
-min="0"
-value="0"
-oninput="calculateInvoice()">
-</div>
-
-<div>
+<input id="discount" type="number" min="0" value="0" oninput="calculate()">
+</div><div>
 <label>GST %</label>
-<input
-id="invGst"
-type="number"
-min="0"
-value="0"
-oninput="calculateInvoice()">
-</div>
-
-<div>
+<input id="gst" type="number" min="0" value="0" oninput="calculate()">
+</div><div>
 <label>Payment Status</label>
-
-<select id="invPaymentStatus">
+<select id="paymentStatus">
 <option>Pending</option>
 <option>Paid</option>
 <option>Partial</option>
 </select>
-
-</div>
-
-<div>
+</div><div>
 <label>Payment Method</label>
-
-<select id="invPaymentMethod">
+<select id="paymentMethod">
 <option>UPI</option>
 <option>Cash</option>
 <option>Bank Transfer</option>
 <option>Other</option>
 </select>
-
-</div>
-
-</div>
-
-<div class="invoice-total">
-
-<div class="invoice-row">
+</div></div><div class="invoice-total"><div class="invoice-row">
 <span>Subtotal</span>
-<b id="invSubtotal">₹0.00</b>
-</div>
-
-<div class="invoice-row">
+<b id="subtotal">₹0.00</b>
+</div><div class="invoice-row">
 <span>Discount</span>
-<b id="invDiscountTotal">₹0.00</b>
-</div>
-
-<div class="invoice-row">
+<b id="discountTotal">₹0.00</b>
+</div><div class="invoice-row">
 <span>GST</span>
-<b id="invGstTotal">₹0.00</b>
-</div>
-
-<div class="invoice-row invoice-grand">
+<b id="gstTotal">₹0.00</b>
+</div><div class="invoice-row grand">
 <span>Grand Total</span>
-<b id="invGrandTotal">₹0.00</b>
-</div>
-
-</div>
-
-<div class="actions">
-
-<button onclick="saveInvoice()">
+<b id="grandTotal">₹0.00</b>
+</div></div><div class="actions"><button onclick="saveInvoice()">
 💾 Save Invoice
-</button>
-
-<button
-class="secondary"
-onclick="printCurrentInvoice()">
+</button><button class="secondary" onclick="printInvoice()">
 🖨️ Print Invoice
-</button>
+</button></div><div id="invoiceMsg"></div></div><!-- INVOICE HISTORY --><div id="invoiceHistory" class="card hidden"><h2>Invoice History</h2>
+<div id="invoiceList"></div></div></div>
+</div><!-- PRINT AREA --><div id="printArea" class="hidden"></div><script type="module">
 
-</div>
-
-<div id="invoiceMsg"></div>
-
-</div>
-
-
-<!-- INVOICE HISTORY -->
-<div id="invoiceHistory" class="card hidden">
-
-<h2>Invoice History</h2>
-
-<input
-id="invoiceSearch"
-placeholder="Search invoice/customer..."
-oninput="renderInvoices()">
-
-<div id="invoices"></div>
-
-</div>
-
-
-<!-- PRINT AREA -->
-<div id="printInvoice" style="display:none"></div>
-
-</div>
-</div>
-
-
-<script type="module">
-
-import {
-initializeApp
-}
-from
-"https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+import {initializeApp}
+from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
 
 import {
 getAuth,
@@ -580,77 +313,62 @@ signInWithEmailAndPassword,
 onAuthStateChanged,
 signOut
 }
-from
-"https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
+from "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
 
 import {
 getFirestore,
 collection,
 addDoc,
 getDocs,
+getDoc,
+setDoc,
+doc,
 query,
 orderBy,
-serverTimestamp,
-doc,
-setDoc,
-getDoc
+serverTimestamp
 }
-from
-"https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
+from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
 
-
-/* FIREBASE */
 
 const firebaseConfig={
-
 apiKey:"AIzaSyCqM1H3BhFYN3fglFnSBOzRB8IELQybtT4",
-
-authDomain:
-"kubera-tech-systems-598d2.firebaseapp.com",
-
-projectId:
-"kubera-tech-systems-598d2",
-
-storageBucket:
-"kubera-tech-systems-598d2.firebasestorage.app",
-
-messagingSenderId:
-"313849516281",
-
-appId:
-"1:313849516281:web:a143957e11e056c6321228"
-
+authDomain:"kubera-tech-systems-598d2.firebaseapp.com",
+projectId:"kubera-tech-systems-598d2",
+storageBucket:"kubera-tech-systems-598d2.firebasestorage.app",
+messagingSenderId:"313849516281",
+appId:"1:313849516281:web:a143957e11e056c6321228"
 };
 
 const app=initializeApp(firebaseConfig);
-
 const auth=getAuth(app);
-
 const db=getFirestore(app);
 
+const ADMIN_EMAIL="bravi8209@gmail.com";
 
-let currentUser=null;
-let currentRole="worker";
-let allUsers=[];
-let allWorks=[];
-let allInvoices=[];
+let user=null;
+let role="worker";
+let users=[];
+let works=[];
+let invoices=[];
 
-
-/* ESCAPE */
 
 window.esc=function(v){
-
 return String(v??"")
 .replace(/&/g,"&amp;")
 .replace(/</g,"&lt;")
 .replace(/>/g,"&gt;")
 .replace(/"/g,"&quot;")
 .replace(/'/g,"&#039;");
-
 };
 
 
-/* LOGIN PAGE */
+function money(v){
+return "₹"+Number(v||0).toLocaleString("en-IN",{
+minimumFractionDigits:2,
+maximumFractionDigits:2
+});
+}
+
 
 window.showLogin=function(){
 
@@ -662,20 +380,14 @@ document.getElementById("authForm").innerHTML=`
 <label>Password</label>
 <input id="password" type="password" placeholder="Password">
 
-<button
-style="width:100%;margin-top:18px"
-onclick="login()">
+<button style="width:100%;margin-top:18px" onclick="login()">
 Login
 </button>
 
 <div id="authMsg"></div>
-
 `;
-
 };
 
-
-/* REGISTER */
 
 window.showRegister=function(){
 
@@ -688,25 +400,16 @@ document.getElementById("authForm").innerHTML=`
 <input id="regEmail" type="email" placeholder="Email">
 
 <label>Password</label>
-<input
-id="regPassword"
-type="password"
-placeholder="Minimum 6 characters">
+<input id="regPassword" type="password" placeholder="Minimum 6 characters">
 
-<button
-style="width:100%;margin-top:18px"
-onclick="register()">
+<button style="width:100%;margin-top:18px" onclick="register()">
 Create Account
 </button>
 
 <div id="authMsg"></div>
-
 `;
-
 };
 
-
-/* LOGIN */
 
 window.login=async function(){
 
@@ -717,36 +420,19 @@ try{
 const email=document.getElementById("email").value.trim();
 const password=document.getElementById("password").value;
 
-if(!email||!password){
+if(!email||!password)
+throw new Error("Email and Password required.");
 
-throw new Error(
-"Email and Password required."
-);
+await signInWithEmailAndPassword(auth,email,password);
 
-}
-
-await signInWithEmailAndPassword(
-auth,
-email,
-password
-);
-
-}
-catch(e){
-
-console.error(e);
+}catch(e){
 
 msg.className="error";
-
-msg.textContent=
-e.message.replace("Firebase: ","");
+msg.textContent=e.message;
 
 }
-
 };
 
-
-/* REGISTER */
 
 window.register=async function(){
 
@@ -758,21 +444,18 @@ const name=document.getElementById("regName").value.trim();
 const email=document.getElementById("regEmail").value.trim().toLowerCase();
 const password=document.getElementById("regPassword").value;
 
-if(!name)
-throw new Error("Name is required.");
+if(!name) throw new Error("Name required.");
+if(password.length<6) throw new Error("Password must be at least 6 characters.");
 
-if(password.length<6)
-throw new Error("Password must be at least 6 characters.");
+if(email===ADMIN_EMAIL)
+throw new Error("Admin account already exists. Please Login.");
 
-const c=
-await createUserWithEmailAndPassword(
-auth,
-email,
-password
+const result=await createUserWithEmailAndPassword(
+auth,email,password
 );
 
 await setDoc(
-doc(db,"users",c.user.uid),
+doc(db,"users",result.user.uid),
 {
 name,
 email,
@@ -782,207 +465,133 @@ createdAt:serverTimestamp()
 );
 
 msg.className="success";
+msg.textContent="Account created successfully.";
 
-msg.textContent=
-"Account created successfully.";
-
-}
-catch(e){
+}catch(e){
 
 msg.className="error";
-
-msg.textContent=
-e.message.replace("Firebase: ","");
+msg.textContent=e.message;
 
 }
-
 };
 
-
-/* LOGOUT */
 
 window.logout=function(){
 signOut(auth);
 };
 
 
-/* AUTH STATE */
+onAuthStateChanged(auth,async u=>{
 
-onAuthStateChanged(
-auth,
-async user=>{
+if(!u){
 
-if(!user){
-
-currentUser=null;
-
-document
-.getElementById("loginPage")
-.classList.remove("hidden");
-
-document
-.getElementById("app")
-.classList.add("hidden");
-
+document.getElementById("loginPage").classList.remove("hidden");
+document.getElementById("app").classList.add("hidden");
 return;
 
 }
 
-currentUser=user;
-currentRole="worker";
+user=u;
 
+role=(u.email||"").toLowerCase()===ADMIN_EMAIL
+?"admin"
+:"worker";
 
 try{
 
-const snap=
-await getDoc(
-doc(db,"users",user.uid)
-);
+const snap=await getDoc(doc(db,"users",u.uid));
 
 if(snap.exists()){
 
-currentRole=
-snap.data().role||"worker";
+role=snap.data().role||role;
 
-}
-else{
+}else{
 
 await setDoc(
-doc(db,"users",user.uid),
+doc(db,"users",u.uid),
 {
-name:user.email.split("@")[0],
-email:user.email,
-role:"worker",
+name:u.email.split("@")[0],
+email:u.email,
+role,
 createdAt:serverTimestamp()
 }
 );
 
 }
 
+}catch(e){
+
+console.log(e);
+
 }
-catch(e){
-
-console.error(e);
-
-}
 
 
-/* SHOW APP */
-
-document
-.getElementById("loginPage")
-.classList.add("hidden");
-
-document
-.getElementById("app")
-.classList.remove("hidden");
-
+document.getElementById("loginPage").classList.add("hidden");
+document.getElementById("app").classList.remove("hidden");
 
 document.getElementById("roleText").textContent=
-(currentRole==="admin"?"ADMIN":"WORKER")
-+" • "+user.email;
+(role==="admin"?"ADMIN":"WORKER")+" • "+u.email;
 
+document.getElementById("workerField")
+.classList.toggle("hidden",role!=="admin");
 
-document.getElementById("workerBox")
-.classList.toggle(
-"hidden",
-currentRole!=="admin"
-);
-
-
-document.getElementById("invoiceBtn")
-.classList.toggle(
-"hidden",
-currentRole!=="admin"
-);
-
+document.getElementById("invoiceButton")
+.classList.toggle("hidden",role!=="admin");
 
 await loadUsers();
 await loadWorks();
 
-if(currentRole==="admin"){
+if(role==="admin")
 await loadInvoices();
-}
 
 });
 
-
-/* USERS */
 
 async function loadUsers(){
 
-allUsers=[];
+users=[];
 
-try{
+const snap=await getDocs(collection(db,"users"));
 
-const snap=
-await getDocs(
-collection(db,"users")
-);
-
-snap.forEach(x=>{
-allUsers.push({
-id:x.id,
-...x.data()
-});
+snap.forEach(d=>{
+users.push({id:d.id,...d.data()});
 });
 
 document.getElementById("workerSelect").innerHTML=
-allUsers
+users
 .filter(x=>x.role==="worker")
-.map(x=>
-`<option value="${esc(x.id)}">
+.map(x=>`<option value="${x.id}">
 ${esc(x.name||x.email)}
-</option>`
-)
+</option>`)
 .join("");
 
 }
-catch(e){
-console.error(e);
-}
 
-}
-
-
-/* WORKS */
 
 async function loadWorks(){
 
-allWorks=[];
+works=[];
 
 try{
 
-const snap=
-await getDocs(
+const snap=await getDocs(
 query(
 collection(db,"works"),
 orderBy("createdAt","desc")
 )
 );
 
-snap.forEach(x=>{
-allWorks.push({
-id:x.id,
-...x.data()
-});
+snap.forEach(d=>{
+works.push({id:d.id,...d.data()});
 });
 
-if(currentRole!=="admin"){
-
-allWorks=
-allWorks.filter(
-x=>x.workerId===currentUser.uid
-);
-
+if(role!=="admin"){
+works=works.filter(x=>x.workerId===user.uid);
 }
 
 renderWorks();
 
-}
-catch(e){
-
-console.error(e);
+}catch(e){
 
 document.getElementById("works").innerHTML=
 `<p class="error">${esc(e.message)}</p>`;
@@ -992,98 +601,57 @@ document.getElementById("works").innerHTML=
 }
 
 
-/* ADD WORK */
-
-window.addWork=async function(){
+window.saveWork=async function(){
 
 const msg=document.getElementById("workMsg");
 
 try{
 
-const customer=
-document.getElementById("customer").value.trim();
+const customer=document.getElementById("customer").value.trim();
+const location=document.getElementById("location").value.trim();
+const details=document.getElementById("details").value.trim();
 
-const location=
-document.getElementById("location").value.trim();
+if(!customer||!location||!details)
+throw new Error("Customer, Location and Work Details required.");
 
-const details=
-document.getElementById("details").value.trim();
+let workerId=user.uid;
+let workerName=user.email;
 
-const material=
-document.getElementById("material").value.trim();
+if(role==="admin"){
 
-if(!customer)
-throw new Error("Customer Name required.");
+workerId=document.getElementById("workerSelect").value;
 
-if(!location)
-throw new Error("Location required.");
+const w=users.find(x=>x.id===workerId);
 
-if(!details)
-throw new Error("Work Details required.");
+if(w) workerName=w.name||w.email;
 
+}else{
 
-let workerId=currentUser.uid;
-let workerName=currentUser.email;
+const w=users.find(x=>x.id===user.uid);
 
-
-if(currentRole==="admin"){
-
-workerId=
-document.getElementById("workerSelect").value;
-
-const w=
-allUsers.find(x=>x.id===workerId);
-
-if(w)
-workerName=w.name||w.email;
+if(w) workerName=w.name||w.email;
 
 }
-else{
-
-const w=
-allUsers.find(
-x=>x.id===currentUser.uid
-);
-
-if(w)
-workerName=w.name||w.email;
-
-}
-
 
 await addDoc(
 collection(db,"works"),
 {
-
 workerId,
 workerName,
-
 customer,
 location,
-
-workType:
-document.getElementById("workType").value,
-
-cameraQty:
-Number(
-document.getElementById("cameraQty").value||0
-),
-
-status:
-document.getElementById("status").value,
-
+workType:document.getElementById("workType").value,
+cameraQty:Number(document.getElementById("cameraQty").value||0),
+status:document.getElementById("workStatus").value,
 details,
-material,
-
-createdBy:currentUser.uid,
+material:document.getElementById("material").value.trim(),
+createdBy:user.uid,
 createdAt:serverTimestamp()
-
 }
 );
 
-
 msg.className="success";
-msg.textContent="✅ Work saved successfully.";
+msg.textContent="✅ Work saved.";
 
 document.getElementById("customer").value="";
 document.getElementById("location").value="";
@@ -1093,8 +661,7 @@ document.getElementById("cameraQty").value=0;
 
 await loadWorks();
 
-}
-catch(e){
+}catch(e){
 
 msg.className="error";
 msg.textContent="❌ "+e.message;
@@ -1104,37 +671,23 @@ msg.textContent="❌ "+e.message;
 };
 
 
-/* RENDER WORK */
-
 window.renderWorks=function(){
 
-const term=
-(
-document.getElementById("search").value||""
-).toLowerCase();
+const term=document.getElementById("searchWork").value.toLowerCase();
 
-const list=
-allWorks.filter(w=>
-`${w.workerName||""}
-${w.customer||""}
-${w.location||""}
-${w.workType||""}
-${w.details||""}`
+const list=works.filter(w=>
+`${w.workerName||""} ${w.customer||""} ${w.location||""} ${w.workType||""}`
 .toLowerCase()
 .includes(term)
 );
 
-document.getElementById("totalCount").textContent=list.length;
-
-document.getElementById("pendingCount").textContent=
+document.getElementById("totalWork").textContent=list.length;
+document.getElementById("pendingWork").textContent=
 list.filter(x=>x.status==="Pending").length;
-
-document.getElementById("completedCount").textContent=
+document.getElementById("completedWork").textContent=
 list.filter(x=>x.status==="Completed").length;
 
-
-document.getElementById("works").innerHTML=
-list.length?
+document.getElementById("works").innerHTML=list.length?
 
 list.map(w=>`
 
@@ -1144,11 +697,8 @@ list.map(w=>`
 
 <div>
 <b>${esc(w.customer)}</b>
-
 <div class="muted">
-${esc(w.workerName||"")}
-•
-${esc(w.location||"")}
+${esc(w.workerName||"")} • ${esc(w.location||"")}
 </div>
 </div>
 
@@ -1160,8 +710,7 @@ ${esc(w.status||"Pending")}
 
 <p>
 <b>${esc(w.workType||"")}</b>
-•
-Cameras: ${Number(w.cameraQty||0)}
+• Cameras: ${Number(w.cameraQty||0)}
 </p>
 
 <div>${esc(w.details||"")}</div>
@@ -1169,19 +718,14 @@ Cameras: ${Number(w.cameraQty||0)}
 ${w.material?
 `<p><b>Material:</b> ${esc(w.material)}</p>`:""}
 
-<div class="muted" style="margin-top:8px">
-${w.createdAt?.toDate?
-w.createdAt.toDate().toLocaleString():
-"Recently added"}
-</div>
-
 ${
-currentRole==="admin"?
-`<button
-style="margin-top:12px"
-onclick="createInvoiceFromWork('${w.id}')">
+role==="admin"
+?
+`<button style="margin-top:12px"
+onclick="invoiceFromWork('${w.id}')">
 🧾 Create Invoice
-</button>`:""
+</button>`
+:""
 }
 
 </div>
@@ -1193,102 +737,56 @@ onclick="createInvoiceFromWork('${w.id}')">
 };
 
 
-/* INVOICE */
+function invoiceNumber(){
 
-function todayISO(){
+let max=0;
 
-return new Date()
-.toISOString()
-.slice(0,10);
+invoices.forEach(i=>{
 
-}
-
-function money(n){
-
-return "₹"+
-Number(n||0).toLocaleString(
-"en-IN",
-{
-minimumFractionDigits:2,
-maximumFractionDigits:2
-}
+const n=parseInt(
+String(i.invoiceNo||"").replace(/\D/g,"")
 );
 
-}
+if(Number.isFinite(n)&&n>max)max=n;
 
+});
 
-function nextInvoiceNumber(){
-
-const nums=
-allInvoices
-.map(x=>
-parseInt(
-String(x.invoiceNo||"")
-.replace(/\D/g,""),
-10
-)
-)
-.filter(Number.isFinite);
-
-const next=
-(nums.length?Math.max(...nums):0)+1;
-
-return "KTS-"+
-String(next).padStart(5,"0");
+return "KTS-"+String(max+1).padStart(5,"0");
 
 }
 
 
-/* SHOW INVOICE */
+window.openInvoices=function(){
 
-window.showInvoices=function(){
+if(role!=="admin")return;
 
-if(currentRole!=="admin"){
-alert("Only Admin can create invoices.");
-return;
-}
+document.getElementById("invoicePanel").classList.remove("hidden");
+document.getElementById("invoiceHistory").classList.remove("hidden");
 
-document.getElementById("invoiceSection")
-.classList.remove("hidden");
-
-document.getElementById("invoiceHistory")
-.classList.remove("hidden");
-
-document.getElementById("invoiceNo").value=
-nextInvoiceNumber();
+document.getElementById("invoiceNo").value=invoiceNumber();
 
 document.getElementById("invoiceDate").value=
-todayISO();
+new Date().toISOString().slice(0,10);
 
-document.getElementById("invCustomer").value="";
-document.getElementById("invMobile").value="";
-document.getElementById("invAddress").value="";
-document.getElementById("invDiscount").value=0;
-document.getElementById("invGst").value=0;
+document.getElementById("invoiceCustomer").value="";
+document.getElementById("invoiceMobile").value="";
+document.getElementById("invoiceAddress").value="";
+document.getElementById("discount").value=0;
+document.getElementById("gst").value=0;
 
 document.getElementById("invoiceItems").innerHTML="";
 
-addInvoiceItem();
+addItem();
 
-calculateInvoice();
+calculate();
 
-document.getElementById("invoiceMsg").textContent="";
-
-document.getElementById("invoiceSection")
-.scrollIntoView({
-behavior:"smooth"
-});
+document.getElementById("invoicePanel")
+.scrollIntoView({behavior:"smooth"});
 
 };
 
 
-/* ADD ITEM */
-
-window.addInvoiceItem=function(
-desc="",
-qty=1,
-rate=0
-){
+window.addItem=function(desc="",qty=1,rate=0){
 
 const row=document.createElement("div");
 
@@ -1298,137 +796,395 @@ row.innerHTML=`
 
 <div>
 <label>Description</label>
-<input
-class="inv-desc"
-value="${esc(desc)}"
-placeholder="CCTV Camera / Service"
-oninput="calculateInvoice()">
+<input class="itemDesc" value="${esc(desc)}"
+oninput="calculate()">
 </div>
 
 <div>
 <label>Qty</label>
-<input
-class="inv-qty"
-type="number"
-min="1"
-value="${qty}"
-oninput="calculateInvoice()">
+<input class="itemQty" type="number" min="1"
+value="${qty}" oninput="calculate()">
 </div>
 
 <div>
 <label>Rate</label>
-<input
-class="inv-rate"
-type="number"
-min="0"
-value="${rate}"
-oninput="calculateInvoice()">
+<input class="itemRate" type="number" min="0"
+value="${rate}" oninput="calculate()">
 </div>
 
 <div>
 <label>Amount</label>
-<input
-class="inv-amount"
-readonly
-value="₹0.00">
+<input class="itemAmount" readonly value="₹0.00">
 </div>
 
 <div>
 <label>&nbsp;</label>
-<button
-class="danger"
-onclick="
-this.closest('.invoice-item').remove();
-calculateInvoice();
-">
+<button class="danger"
+onclick="this.closest('.invoice-item').remove();calculate()">
 ✕
 </button>
 </div>
 
 `;
 
-document
-.getElementById("invoiceItems")
-.appendChild(row);
+document.getElementById("invoiceItems").appendChild(row);
 
-calculateInvoice();
+calculate();
 
 };
 
 
-/* CALCULATE */
-
-window.calculateInvoice=function(){
+window.calculate=function(){
 
 let subtotal=0;
 
-document
-.querySelectorAll(".invoice-item")
-.forEach(row=>{
+document.querySelectorAll(".invoice-item").forEach(row=>{
 
-const qty=
-Number(
-row.querySelector(".inv-qty").value||0
-);
-
-const rate=
-Number(
-row.querySelector(".inv-rate").value||0
-);
+const qty=Number(row.querySelector(".itemQty").value||0);
+const rate=Number(row.querySelector(".itemRate").value||0);
 
 const amount=qty*rate;
 
-row.querySelector(".inv-amount").value=
-money(amount);
+row.querySelector(".itemAmount").value=money(amount);
 
 subtotal+=amount;
 
 });
 
+const discount=Number(document.getElementById("discount").value||0);
+const gstPercent=Number(document.getElementById("gst").value||0);
 
-const discount=
-Number(
-document.getElementById("invDiscount").value||0
-);
+const taxable=Math.max(0,subtotal-discount);
+const gstAmount=taxable*gstPercent/100;
+const total=taxable+gstAmount;
 
-const gstPercent=
-Number(
-document.getElementById("invGst").value||0
-);
+document.getElementById("subtotal").textContent=money(subtotal);
+document.getElementById("discountTotal").textContent=money(discount);
+document.getElementById("gstTotal").textContent=money(gstAmount);
+document.getElementById("grandTotal").textContent=money(total);
 
-const afterDiscount=
-Math.max(0,subtotal-discount);
-
-const gst=
-afterDiscount*gstPercent/100;
-
-const grandTotal=
-afterDiscount+gst;
-
-
-document.getElementById("invSubtotal").textContent=
-money(subtotal);
-
-document.getElementById("invDiscountTotal").textContent=
-money(discount);
-
-document.getElementById("invGstTotal").textContent=
-money(gst);
-
-document.getElementById("invGrandTotal").textContent=
-money(grandTotal);
-
-return{
-subtotal,
-discount,
-gstPercent,
-gst,
-grandTotal
-};
+return {subtotal,discount,gstPercent,gstAmount,total};
 
 };
 
 
-/* CREATE FROM WORK */
+window.saveInvoice=async function(){
 
-window.
+if(role!=="admin"){
+alert("Only Admin can create invoice.");
+return;
+}
+
+const msg=document.getElementById("invoiceMsg");
+
+try{
+
+const customer=document.getElementById("invoiceCustomer").value.trim();
+
+if(!customer)
+throw new Error("Customer name required.");
+
+const items=[];
+
+document.querySelectorAll(".invoice-item").forEach(row=>{
+
+const description=row.querySelector(".itemDesc").value.trim();
+const qty=Number(row.querySelector(".itemQty").value||0);
+const rate=Number(row.querySelector(".itemRate").value||0);
+
+if(description){
+items.push({
+description,
+qty,
+rate,
+amount:qty*rate
+});
+}
+
+});
+
+if(!items.length)
+throw new Error("Add at least one item.");
+
+const t=calculate();
+
+const data={
+
+invoiceNo:document.getElementById("invoiceNo").value,
+invoiceDate:document.getElementById("invoiceDate").value,
+
+customer,
+mobile:document.getElementById("invoiceMobile").value.trim(),
+address:document.getElementById("invoiceAddress").value.trim(),
+
+items,
+
+subtotal:t.subtotal,
+discount:t.discount,
+gstPercent:t.gstPercent,
+gst:t.gstAmount,
+grandTotal:t.total,
+
+paymentStatus:document.getElementById("paymentStatus").value,
+paymentMethod:document.getElementById("paymentMethod").value,
+
+createdBy:user.uid,
+createdAt:serverTimestamp()
+
+};
+
+await addDoc(collection(db,"invoices"),data);
+
+msg.className="success";
+msg.textContent="✅ Invoice saved successfully.";
+
+await loadInvoices();
+
+}catch(e){
+
+msg.className="error";
+msg.textContent="❌ "+e.message;
+
+}
+
+};
+
+
+window.invoiceFromWork=function(id){
+
+if(role!=="admin")return;
+
+const w=works.find(x=>x.id===id);
+
+if(!w)return;
+
+openInvoices();
+
+document.getElementById("invoiceCustomer").value=w.customer||"";
+
+document.getElementById("invoiceItems").innerHTML="";
+
+addItem(w.workType||"CCTV Service",w.cameraQty||1,0);
+
+calculate();
+
+};
+
+
+async function loadInvoices(){
+
+invoices=[];
+
+const snap=await getDocs(
+query(
+collection(db,"invoices"),
+orderBy("createdAt","desc")
+)
+);
+
+snap.forEach(d=>{
+invoices.push({id:d.id,...d.data()});
+});
+
+renderInvoices();
+
+}
+
+
+function renderInvoices(){
+
+document.getElementById("invoiceList").innerHTML=
+
+invoices.length?
+
+invoices.map(i=>`
+
+<div class="invoice-card">
+
+<b>${esc(i.invoiceNo)}</b>
+
+<div class="muted">
+${esc(i.invoiceDate||"")}
+</div>
+
+<p>
+Customer: <b>${esc(i.customer||"")}</b>
+</p>
+
+<p>
+Total: <b>${money(i.grandTotal)}</b>
+</p>
+
+<p>
+Payment: ${esc(i.paymentStatus||"Pending")}
+</p>
+
+<button onclick='printSavedInvoice(${JSON.stringify(i).replace(/'/g,"&#39;")})'>
+🖨️ Print
+</button>
+
+</div>
+
+`).join("")
+
+:"<p class='muted'>No invoices yet.</p>";
+
+}
+
+
+window.printInvoice=function(){
+
+const items=[];
+
+document.querySelectorAll(".invoice-item").forEach(row=>{
+
+items.push({
+
+description:row.querySelector(".itemDesc").value,
+qty:row.querySelector(".itemQty").value,
+rate:row.querySelector(".itemRate").value,
+amount:Number(row.querySelector(".itemQty").value||0)*
+Number(row.querySelector(".itemRate").value||0)
+
+});
+
+});
+
+const t=calculate();
+
+const data={
+
+invoiceNo:document.getElementById("invoiceNo").value,
+invoiceDate:document.getElementById("invoiceDate").value,
+customer:document.getElementById("invoiceCustomer").value,
+mobile:document.getElementById("invoiceMobile").value,
+address:document.getElementById("invoiceAddress").value,
+items,
+subtotal:t.subtotal,
+discount:t.discount,
+gst:t.gstAmount,
+grandTotal:t.total,
+paymentStatus:document.getElementById("paymentStatus").value,
+paymentMethod:document.getElementById("paymentMethod").value
+
+};
+
+makePrint(data);
+
+};
+
+
+window.printSavedInvoice=function(data){
+
+makePrint(data);
+
+};
+
+
+function makePrint(i){
+
+const area=document.getElementById("printArea");
+
+area.innerHTML=`
+
+<div style="font-family:Arial;max-width:800px;margin:auto">
+
+<div style="text-align:center;border-bottom:2px solid #111;padding-bottom:15px">
+
+<h1>KUBERA TECH SYSTEMS</h1>
+
+<h3>Ravi Baraiya</h3>
+
+<div>Mobile: 7984550400</div>
+
+<div>Rajkot</div>
+
+<h2>INVOICE</h2>
+
+</div>
+
+<div style="display:flex;justify-content:space-between;margin-top:20px">
+
+<div>
+<b>Bill To:</b><br>
+${esc(i.customer||"")}<br>
+${esc(i.mobile||"")}<br>
+${esc(i.address||"")}
+</div>
+
+<div>
+<b>Invoice No:</b> ${esc(i.invoiceNo||"")}<br>
+<b>Date:</b> ${esc(i.invoiceDate||"")}
+</div>
+
+</div>
+
+<table style="width:100%;border-collapse:collapse;margin-top:25px">
+
+<tr>
+<th style="border:1px solid #333;padding:8px">Description</th>
+<th style="border:1px solid #333;padding:8px">Qty</th>
+<th style="border:1px solid #333;padding:8px">Rate</th>
+<th style="border:1px solid #333;padding:8px">Amount</th>
+</tr>
+
+${(i.items||[]).map(x=>`
+
+<tr>
+<td style="border:1px solid #333;padding:8px">
+${esc(x.description)}
+</td>
+
+<td style="border:1px solid #333;padding:8px;text-align:center">
+${x.qty}
+</td>
+
+<td style="border:1px solid #333;padding:8px;text-align:right">
+${money(x.rate)}
+</td>
+
+<td style="border:1px solid #333;padding:8px;text-align:right">
+${money(x.amount)}
+</td>
+</tr>
+
+`).join("")}
+
+</table>
+
+<div style="margin-left:auto;max-width:350px;margin-top:20px">
+
+<p>Subtotal: <b>${money(i.subtotal)}</b></p>
+
+<p>Discount: <b>${money(i.discount)}</b></p>
+
+<p>GST: <b>${money(i.gst)}</b></p>
+
+<h2 style="border-top:2px solid #111;padding-top:10px">
+Grand Total: ${money(i.grandTotal)}
+</h2>
+
+</div>
+
+<p>
+<b>Payment Status:</b> ${esc(i.paymentStatus||"Pending")}
+</p>
+
+<p>
+<b>Payment Method:</b> ${esc(i.paymentMethod||"")}
+</p>
+
+<div style="margin-top:60px;text-align:right">
+<b>For KUBERA TECH SYSTEMS</b><br><br>
+Authorized Signature
+</div>
+
+</div>
+`;
+
+window.print();
+
+}
+
+</script></body>
+</html>
